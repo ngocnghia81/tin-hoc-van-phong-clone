@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TRUNG TÂM TIN HỌC ABC</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="images/banner.css" />
+        <link rel="stylesheet" href="images/course-images.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5ElEQVRYR8WXS2gTURSG/zOTNJW2aLUqKLgRBEFwISiCGxERXIgbQRQEQRRduBHcuFJ8IKKIj4ULceHCnSjiRsGFiAhuxIWIIFYUH1DFqtVqk5nxnJk7mTSTzEyK9C7Dvefc8/977jn33BvCMh9a5vhYGYCgXH8EQGMZk1ohhBhz9l0SQKW+F8BpAKMANIBWAXQJwEkAl5IkuVuNJzXAtu1TAC4A0Gb5kSQGcBjA+SiKTjUCqQvgOM5xAJeagJcgBHJEKXWlnk9NgGw2u0FKOQlgfZPgDsQDpdQW13WnF/OtCmBZ1l0AexcZvJLbHaXUvlpeFQCWZW0G8HyJwR2Yj0qpLY7jfK4GUgFgmuZRIcT1FoE7bkeUUjeqQcwDME3zABHdaTG4434gDMObC0EqAEzT3E1Ej9oE7kDsCYLgSbVnMw9g2/ZGIcRUB8DnIKSUm7LZ7OdKkDkA0zRNInrRQXAHYlsQBJPlEHMAhmFcJKJjHQZ3IA4GQXBpAUChUDiulLrYJXAH4kAYhtdmARzH2QngSRfBHYjdURQ9nQGwbXs9Eb3tMrgDsS2Kog+aZVmbiOhTAsAdpVS/lPKXEOJZHMfXwjB8UCwWNwohDhHRHgDbAaxNAH5KKbfkcrnPWqlUWiOl/JEAsBRCrJJSzhDRKgDbhBDH4jg+G0XRnWKxuFoIcYSIRgBsTgJeKpX6tRDiexLAUsrVWuufRLSaiLYS0ZEkSc5FUXRbgud5fQMDA1NE1JcEfBAEA1prVSwWNwghvnULQAixIUmSM2EY3tJzHvI8b3RwcPBVkieklBoOw/CVnvvQ9/3Rvr6+V0mBCCG2R1H0WM95yPO8kYGBgZdJghDR7jAMH+k5gFKptC+O4ztJghDRvjAM7+lqgbTWI1LKe0mCENH+MAzvz9SBXq+3t1AoTBBRf5IgWutDuVzuwWwd6PV6e/L5/AQRbUoSpFwuH87n8w9n68ByfpD+9wfJX2QfYkKBHUPEAAAAAElFTkSuQmCC" />
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        <header>
+            <div class="top-header">
+                <div class="container">
+                    <div class="contact-info">
+                        <span
+                            ><i class="fas fa-phone"></i> Hotline: (028) 3835
+                            4409</span
+                        >
+                        <span
+                            ><i class="far fa-envelope"></i> Email:
+                            trungtam@tinhocvanphong.edu.vn</span
+                        >
+                        <span
+                            ><i class="fas fa-clock"></i> Giờ làm việc: 7:30 -
+                            19:30</span
+                        >
+                        <div class="social-links">
+                            <a href="#" title="Facebook"
+                                ><i class="fab fa-facebook"></i
+                            ></a>
+                            <a href="#" title="Youtube"
+                                ><i class="fab fa-youtube"></i
+                            ></a>
+                            <a href="#" title="Zalo">Zalo</a>
+                        </div>
+                        <div class="auth-links">
+                            <a href="#" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            <a href="#" id="registerBtn"><i class="fas fa-user-plus"></i> Đăng ký</a>
+                            <div class="user-profile dropdown" style="display: none;">
+                                <a href="#" id="userProfileBtn">
+                                    <i class="fas fa-user-circle"></i> <span id="username">User</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="dashboard.html" id="dashboardLink"><i class="fas fa-tachometer-alt"></i> Bảng điều khiển</a></li>
+                                    <li><a href="#" id="profileLink"><i class="fas fa-id-card"></i> Thông tin cá nhân</a></li>
+                                    <li><a href="#" id="myCourses"><i class="fas fa-graduation-cap"></i> Khóa học của tôi</a></li>
+                                    <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header container">
+                <div class="logo">
+                    <div class="site-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">TRUNG TÂM TIN HỌC ABC</span>
+                            <span class="logo-subtitle">Đào tạo tin học chuyên nghiệp</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="active"
+                                ><i class="fas fa-home"></i> Trang chủ</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#about"
+                                ><i class="fas fa-info-circle"></i> Giới
+                                thiệu</a
+                            >
+                        </li>
+                        <li class="dropdown">
+                            <a href="#courses"
+                                ><i class="fas fa-graduation-cap"></i> Khóa học
+                                <i class="fas fa-chevron-down"></i
+                            ></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#basic"
+                                        >Tin học văn phòng cơ bản</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#advanced"
+                                        >Tin học văn phòng nâng cao</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#online">Khóa học trực tuyến</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#schedule"
+                                ><i class="fas fa-calendar-alt"></i> Lịch khai
+                                giảng</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#news"
+                                ><i class="fas fa-newspaper"></i> Tin tức</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                ><i class="fas fa-phone-alt"></i> Liên hệ</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner-bg">
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="banner-content">
+                <h2>Đào tạo Tin học Văn phòng Chuyên nghiệp</h2>
+                <p>
+                    Nâng cao kỹ năng tin học với các khóa học chất lượng cao từ
+                    đội ngũ giảng viên giàu kinh nghiệm
+                </p>
+                <div class="banner-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15,000+</span>
+                        <span class="stat-label">Học viên</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Khóa học</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Đậu chứng chỉ</span>
+                    </div>
+                </div>
+                <a href="#courses" class="banner-btn">Xem khóa học</a>
+            </div>
+            <div class="banner-wave">
+                <svg
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="advantages-section">
+            <div class="container">
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Giảng viên giàu kinh nghiệm</h3>
+                        <p>
+                            Đội ngũ giảng viên có nhiều năm kinh nghiệm giảng
+                            dạy và làm việc thực tế
+                        </p>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Lớp học số lượng nhỏ</h3>
+                        <p>Tối đa 15 học viên/lớp giúp tăng hiệu quả học tập</p>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Thực hành 100%</h3>
+                        <p>
+                            Học viên được thực hành trên máy tính trong suốt
+                            khóa học
+                        </p>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Chứng chỉ được công nhận</h3>
+                        <p>
+                            Chứng chỉ có giá trị trên toàn quốc và được các
+                            doanh nghiệp công nhận
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-title" id="courses">
+            <div class="container">
+                <h1>Lịch khai giảng Tin học văn phòng</h1>
+                <p class="subtitle">
+                    Chọn khóa học phù hợp với trình độ của bạn
+                </p>
+            </div>
+        </div>
+
+        <main class="container">
+            <div class="course-list">
+                <div class="course-item" data-course="UDCB">
+                    <span class="course-type-badge basic">Cơ bản</span>
+                    <div class="course-image-container">
+                        <div class="course-image">
+                            <div class="course-image-overlay">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <div class="info-row">
+                            <span class="label">Lớp:</span>
+                            <span class="value">UDCB_303SZ</span>
+                        </div>
+                        <div class="course-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>36 giờ</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Sơ cấp</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-book"></i>
+                                <span>Có giáo trình</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Thời gian:</span>
+                            <span class="value"
+                                >Thứ 2-3-4-5-6 (08:00 - 11:15)</span
+                            >
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Ngày khai giảng:</span>
+                            <span class="value">06/05/2025</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Địa điểm học:</span>
+                            <span class="value">227 Nguyễn Văn Cừ, Q.5</span>
+                        </div>
+                        <div class="course-price">2,400,000 VNĐ</div>
+                        <div class="course-progress">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                        <div class="seats-left urgent">Còn 3 chỗ trống</div>
+                        <button class="register-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Đăng ký ngay
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-item" data-course="UDNC">
+                    <span class="course-type-badge advanced">Nâng cao</span>
+                    <div class="course-image-container">
+                        <div class="course-image">
+                            <div class="course-image-overlay">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <div class="info-row">
+                            <span class="label">Lớp:</span>
+                            <span class="value">UDNC_303T246</span>
+                        </div>
+                        <div class="course-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>48 giờ</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Nâng cao</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-book"></i>
+                                <span>Có giáo trình</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Thời gian:</span>
+                            <span class="value">Thứ 2-4-6 (17:45 - 21:00)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Ngày khai giảng:</span>
+                            <span class="value">07/05/2025</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Địa điểm học:</span>
+                            <span class="value">153 Nguyễn Chí Thanh, Q.5</span>
+                        </div>
+                        <div class="course-price">3,200,000 VNĐ</div>
+                        <div class="course-progress">
+                            <div class="progress-bar" style="width: 60%"></div>
+                        </div>
+                        <div class="seats-left">Còn 6 chỗ trống</div>
+                        <button class="register-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Đăng ký ngay
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-item" data-course="ONLINE">
+                    <span class="course-type-badge online">Online</span>
+                    <div class="course-image-container">
+                        <div class="course-image">
+                            <div class="course-image-overlay">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <div class="info-row">
+                            <span class="label">Lớp:</span>
+                            <span class="value">UDCB_303S7NO</span>
+                        </div>
+                        <div class="course-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>36 giờ</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-video"></i>
+                                <span>Trực tuyến</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-redo"></i>
+                                <span>Xem lại</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Thời gian:</span>
+                            <span class="value"
+                                >Thứ 7 + Chủ Nhật (08:00 - 11:15)</span
+                            >
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Ngày khai giảng:</span>
+                            <span class="value">10/05/2025</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Địa điểm học:</span>
+                            <span class="value">Online qua Zoom</span>
+                        </div>
+                        <div class="course-price">2,000,000 VNĐ</div>
+                        <div class="course-progress">
+                            <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                        <div class="seats-left">Còn 12 chỗ trống</div>
+                        <button class="register-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Đăng ký ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Học viên nói gì về chúng tôi</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>
+                                "Khóa học rất bổ ích, giảng viên nhiệt tình. Tôi
+                                đã học được rất nhiều kiến thức mới và áp dụng
+                                được vào công việc."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" data-avatar="1">
+                                <div class="avatar-text">NVA</div>
+                            </div>
+                            <div class="author-info">
+                                <h4>Nguyễn Văn A</h4>
+                                <p>Nhân viên văn phòng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>
+                                "Chương trình học được thiết kế rất khoa học,
+                                phù hợp với người đi làm. Giảng viên rất tận
+                                tâm."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" data-avatar="2">
+                                <div class="avatar-text">TTB</div>
+                            </div>
+                            <div class="author-info">
+                                <h4>Trần Thị B</h4>
+                                <p>Kế toán</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Trung tâm Tin học Văn phòng</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> 227 Nguyễn Văn
+                            Cừ, P4, Quận 5, Tp HCM
+                        </p>
+                        <p><i class="fas fa-phone"></i> (028) 3835 4409</p>
+                        <p>
+                            <i class="far fa-envelope"></i>
+                            trungtam@tinhocvanphong.edu.vn
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Giờ làm việc</h3>
+                        <p>Thứ 2 - Thứ 6: 7:30 - 19:30</p>
+                        <p>Thứ 7 - Chủ nhật: 7:30 - 17:30</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal" style="display: none;">
+            <div class="modal-content login-modal">
+                <div class="modal-header abc-header">
+                    <div class="abc-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>TRUNG TÂM TIN HỌC ABC</h3>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="login-title">
+                        <h4>Đăng nhập hệ thống</h4>
+                    </div>
+                    <form id="loginForm" class="auth-form">
+                        <div class="role-tabs">
+                            <button type="button" class="role-tab active" data-role="student">Sinh Viên</button>
+                            <button type="button" class="role-tab" data-role="teacher">Giảng Viên</button>
+                            <button type="button" class="role-tab" data-role="admin">Quản trị viên</button>
+                            <input type="hidden" name="userRole" id="selectedRole" value="student">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginEmail">Tên đăng nhập:</label>
+                            <input type="text" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Mật khẩu:</label>
+                            <input type="password" id="loginPassword" required>
+                            <div class="forgot-password">
+                                <a href="#" id="forgotPasswordLink">Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn abc-btn">
+                                <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                            </button>
+                        </div>
+                        <div class="auth-alternative">
+                            <p>Chưa có tài khoản? <a href="#" id="switchToRegister">Đăng ký ngay</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal" style="display: none;">
+            <div class="modal-content login-modal">
+                <div class="modal-header abc-header">
+                    <div class="abc-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>TRUNG TÂM TIN HỌC ABC</h3>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="login-title">
+                        <h4>Đăng ký tài khoản</h4>
+                    </div>
+                    <form id="registerForm" class="auth-form">
+                        <input type="hidden" name="registerRole" id="selectedRegisterRole" value="student">
+                        <div class="form-group">
+                            <label for="registerFullName">Họ và tên:</label>
+                            <input type="text" id="registerFullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Email:</label>
+                            <input type="email" id="registerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPhone">Số điện thoại:</label>
+                            <input type="tel" id="registerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Mật khẩu:</label>
+                            <input type="password" id="registerPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Xác nhận mật khẩu:</label>
+                            <input type="password" id="confirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn abc-btn">
+                                <i class="fas fa-user-plus"></i> Đăng ký
+                            </button>
+                        </div>
+                        <div class="auth-alternative">
+                            <p>Đã có tài khoản? <a href="#" id="switchToLogin">Đăng nhập</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgotPasswordModal" class="modal" style="display: none;">
+            <div class="modal-content login-modal">
+                <div class="modal-header abc-header">
+                    <div class="abc-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>TRUNG TÂM TIN HỌC ABC</h3>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="login-title">
+                        <h4>Khôi phục mật khẩu</h4>
+                    </div>
+                    <form id="forgotPasswordForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="resetEmail">Email:</label>
+                            <input type="email" id="resetEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn abc-btn">
+                                <i class="fas fa-paper-plane"></i> Gửi yêu cầu
+                            </button>
+                        </div>
+                        <div class="auth-alternative">
+                            <p><a href="#" id="backToLogin">Quay lại đăng nhập</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

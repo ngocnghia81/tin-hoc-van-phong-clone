@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản Lý Lớp Học - TRUNG TÂM TIN HỌC ABC</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="dashboard.css" />
+        <link rel="stylesheet" href="class-management.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5ElEQVRYR8WXS2gTURSG/zOTNJW2aLUqKLgRBEFwISiCGxERXIgbQRQEQRRduBHcuFJ8IKKIj4ULceHCnSjiRsGFiAhuxIWIIFYUH1DFqtVqk5nxnJk7mTSTzEyK9C7Dvefc8/977jn33BvCMh9a5vhYGYCgXH8EQGMZk1ohhBhz9l0SQKW+F8BpAKMANIBWAXQJwEkAl5IkuVuNJzXAtu1TAC4A0Gb5kSQGcBjA+SiKTjUCqQvgOM5xAJeagJcgBHJEKXWlnk9NgGw2u0FKOQlgfZPgDsQDpdQW13WnF/OtCmBZ1l0AexcZvJLbHaXUvlpeFQCWZW0G8HyJwR2Yj0qpLY7jfK4GUgFgmuZRIcT1FoE7bkeUUjeqQcwDME3zABHdaTG4434gDMObC0EqAEzT3E1Ej9oE7kDsCYLgSbVnMw9g2/ZGIcRUB8DnIKSUm7LZ7OdKkDkA0zRNInrRQXAHYlsQBJPlEHMAhmFcJKJjHQZ3IA4GQXBpAUChUDiulLrYJXAH4kAYhtdmARzH2QngSRfBHYjdURQ9nQGwbXs9Eb3tMrgDsS2Kog+aZVmbiOhTAsAdpVS/lPKXEOJZHMfXwjB8UCwWNwohDhHRHgDbAaxNAH5KKbfkcrnPWqlUWiOl/JEAsBRCrJJSzhDRKgDbhBDH4jg+G0XRnWKxuFoIcYSIRgBsTgJeKpX6tRDiexLAUsrVWuufRLSaiLYS0ZEkSc5FUXRbgud5fQMDA1NE1JcEfBAEA1prVSwWNwghvnULQAixIUmSM2EY3tJzHvI8b3RwcPBVkieklBoOw/CVnvvQ9/3Rvr6+V0mBCCG2R1H0WM95yPO8kYGBgZdJghDR7jAMH+k5gFKptC+O4ztJghDRvjAM7+lqgbTWI1LKe0mCENH+MAzvz9SBXq+3t1AoTBBRf5IgWutDuVzuwWwd6PV6e/L5/AQRbUoSpFwuH87n8w9n68ByfpD+9wfJX2QfYkKBHUPEAAAAAElFTkSuQmCC" />
+    </head>
+    <body class="dashboard-body">
+        <div class="dashboard-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>TIN HỌC ABC</h2>
+                </div>
+                
+                <div class="sidebar-user">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="sidebarUserName">Nguyễn Minh Long</h3>
+                        <span class="user-role" id="sidebarUserRole">Quản trị viên</span>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Bảng điều khiển</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-management.html">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Quản lý giảng viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="student-management.html">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Quản lý học viên</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="class-management.html">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Quản lý lớp học</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#exams">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Quản lý lịch thi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#courses">
+                                <i class="fas fa-book"></i>
+                                <span>Khóa học</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#accounts">
+                                <i class="fas fa-users"></i>
+                                <span>Quản lý tài khoản</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#revenue">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Doanh thu</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Đăng xuất</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <header class="content-header">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="header-search">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Tìm kiếm...">
+                        </div>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <i class="far fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-envelope"></i>
+                            <span class="badge">5</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="headerUserName">Nguyễn Minh Long</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#profile"><i class="fas fa-user"></i> Thông tin cá nhân</a>
+                                <a href="#settings"><i class="fas fa-cog"></i> Cài đặt</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="content-wrapper">
+                    <div class="content-header-title">
+                        <h1>Quản Lý Lớp Học</h1>
+                        <p>Quản lý thông tin và hoạt động của các lớp học tại trung tâm</p>
+                    </div>
+                    
+                    <!-- Class Management Interface -->
+                    <div class="class-management">
+                        <!-- Tab Navigation -->
+                        <div class="tab-navigation">
+                            <button class="tab-btn active" data-tab="info">
+                                <i class="fas fa-info-circle"></i> Thông tin
+                            </button>
+                            <button class="tab-btn" data-tab="refresh">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                        
+                        <!-- Main Content Area -->
+                        <div class="class-content">
+                            <!-- Left Panel: Class List -->
+                            <div class="class-list-panel">
+                                <div class="panel-header">
+                                    <div class="search-filter">
+                                        <div class="search-box">
+                                            <i class="fas fa-search"></i>
+                                            <input type="text" placeholder="Tìm kiếm lớp học..." id="classSearch">
+                                        </div>
+                                        <select id="filterClasses">
+                                            <option value="">Tất cả</option>
+                                            <option value="active">Sắp mở giảng</option>
+                                            <option value="ongoing">Đã kết thúc</option>
+                                            <option value="completed">Đã kết thúc</option>
+                                        </select>
+                                    </div>
+                                    <div class="panel-actions">
+                                        <button class="action-btn" id="addClassBtn">
+                                            <i class="fas fa-plus"></i> Thêm lớp học
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="class-table-container">
+                                    <table class="class-table">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Mã Lớp Học</th>
+                                                <th>Tên Lớp Học</th>
+                                                <th>Lịch Học</th>
+                                                <th>Ngày Bắt Đầu</th>
+                                                <th>Ngày Kết Thúc</th>
+                                                <th>Tình Trạng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="selected">
+                                                <td>1</td>
+                                                <td>149171764337</td>
+                                                <td>Lớp PHP</td>
+                                                <td>2-4-6</td>
+                                                <td>20-03-2017</td>
+                                                <td>15-06-2017</td>
+                                                <td><span class="status-badge active">Sắp mở giảng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>149170753978</td>
+                                                <td>Lớp Học ASP</td>
+                                                <td>3-5-7</td>
+                                                <td>13-12-2016</td>
+                                                <td>28-01-2017</td>
+                                                <td><span class="status-badge completed">Đã kết thúc</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>148452172010</td>
+                                                <td>Lớp Tính Java</td>
+                                                <td>2-4-6</td>
+                                                <td>22-05-2017</td>
+                                                <td>21-07-2017</td>
+                                                <td><span class="status-badge active">Sắp mở giảng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>148456896038</td>
+                                                <td>Khóa đồ họa</td>
+                                                <td>3-5-7</td>
+                                                <td>22-05-2017</td>
+                                                <td>21-07-2017</td>
+                                                <td><span class="status-badge active">Sắp mở giảng</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="pagination">
+                                    <button class="pagination-btn" disabled>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="pagination-btn active">1</button>
+                                    <button class="pagination-btn">2</button>
+                                    <button class="pagination-btn">3</button>
+                                    <button class="pagination-btn">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Panel: Class Details -->
+                            <div class="class-details-panel">
+                                <div class="panel-header">
+                                    <h3>Thông tin chi tiết</h3>
+                                </div>
+                                
+                                <div class="class-details">
+                                    <div class="class-info-section">
+                                        <div class="section-header">
+                                            <h4><i class="fas fa-info-circle"></i> Thông tin lớp học</h4>
+                                        </div>
+                                        <div class="info-grid">
+                                            <div class="info-item">
+                                                <label>Mã lớp học:</label>
+                                                <div class="info-value" id="classId">149171764337</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Tên lớp học:</label>
+                                                <div class="info-value" id="className">Lớp PHP</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Lịch học:</label>
+                                                <div class="info-value" id="classSchedule">2-4-6</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Ngày bắt đầu:</label>
+                                                <div class="info-value" id="startDate">20-03-2017</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Ngày kết thúc:</label>
+                                                <div class="info-value" id="endDate">15-06-2017</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Tình trạng:</label>
+                                                <div class="info-value" id="classStatus">
+                                                    <span class="status-badge active">Sắp mở giảng</span>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Tên khóa học:</label>
+                                                <div class="info-value" id="courseName">PHP (online, cơ bản, cao cấp)</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Phòng học:</label>
+                                                <div class="info-value" id="classroom">P.101</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <label>Tên giảng viên:</label>
+                                                <div class="info-value" id="teacherName">Trần Trọng Hải</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="class-info-section">
+                                        <div class="section-header">
+                                            <h4><i class="fas fa-user-graduate"></i> Danh sách học viên</h4>
+                                        </div>
+                                        <div class="student-list">
+                                            <table class="student-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Mã học viên</th>
+                                                        <th>Tên học viên</th>
+                                                        <th>Điểm danh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>SV001</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>12/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>SV002</td>
+                                                        <td>Trần Thị B</td>
+                                                        <td>15/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>SV003</td>
+                                                        <td>Lê Văn C</td>
+                                                        <td>10/15</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="class-info-section">
+                                        <div class="section-header">
+                                            <h4><i class="fas fa-sticky-note"></i> Ghi chú</h4>
+                                        </div>
+                                        <div class="notes-area">
+                                            <textarea id="classNotes" placeholder="Nhập ghi chú về lớp học...">Lớp học đang tiến triển tốt. Cần bổ sung tài liệu về Laravel framework.</textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="action-buttons">
+                                        <button class="action-btn primary" id="updateClassBtn">
+                                            <i class="fas fa-save"></i> Cập nhật
+                                        </button>
+                                        <button class="action-btn warning" id="printClassBtn">
+                                            <i class="fas fa-print"></i> In thông tin
+                                        </button>
+                                        <button class="action-btn danger" id="deleteClassBtn">
+                                            <i class="fas fa-trash-alt"></i> Xóa lớp học
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <footer class="content-footer">
+                    <p>&copy; 2025 TRUNG TÂM TIN HỌC ABC. Tất cả quyền được bảo lưu.</p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- Add Class Modal -->
+        <div class="modal" id="addClassModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Thêm Lớp Học Mới</h3>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addClassForm">
+                        <div class="form-group">
+                            <label for="newClassName">Tên lớp học:</label>
+                            <input type="text" id="newClassName" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="newClassSchedule">Lịch học:</label>
+                                <select id="newClassSchedule" required>
+                                    <option value="2-4-6">Thứ 2-4-6</option>
+                                    <option value="3-5-7">Thứ 3-5-7</option>
+                                    <option value="7-CN">Thứ 7-CN</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newClassroom">Phòng học:</label>
+                                <select id="newClassroom" required>
+                                    <option value="P.101">P.101</option>
+                                    <option value="P.102">P.102</option>
+                                    <option value="P.103">P.103</option>
+                                    <option value="P.201">P.201</option>
+                                    <option value="P.202">P.202</option>
+                                    <option value="P.203">P.203</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="newStartDate">Ngày bắt đầu:</label>
+                                <input type="date" id="newStartDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newEndDate">Ngày kết thúc:</label>
+                                <input type="date" id="newEndDate" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="newCourse">Khóa học:</label>
+                            <select id="newCourse" required>
+                                <option value="PHP">PHP (online, cơ bản, cao cấp)</option>
+                                <option value="ASP">ASP.NET</option>
+                                <option value="Java">Java</option>
+                                <option value="Graphics">Đồ họa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="newTeacher">Giảng viên:</label>
+                            <select id="newTeacher" required>
+                                <option value="1">Trần Trọng Hải</option>
+                                <option value="2">Nguyễn Thị Minh</option>
+                                <option value="3">Lê Văn Quang</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="newNotes">Ghi chú:</label>
+                            <textarea id="newNotes" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn">Hủy bỏ</button>
+                            <button type="submit" class="submit-btn">Thêm lớp học</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Confirmation Modal -->
+        <div class="modal" id="confirmationModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Xác nhận</h3>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa lớp học này không? Hành động này không thể hoàn tác.</p>
+                    <div class="form-actions">
+                        <button class="cancel-btn">Hủy bỏ</button>
+                        <button class="confirm-btn danger">Xác nhận xóa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="class-management.js"></script>
+    </body>
+</html>
