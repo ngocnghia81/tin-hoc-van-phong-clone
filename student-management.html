@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="dashboard.css" />
         <link rel="stylesheet" href="student-management.css" />
+        <link rel="stylesheet" href="search-bar.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -59,13 +60,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#classes">
+                            <a href="class-management.html">
                                 <i class="fas fa-chart-line"></i>
                                 <span>Quản lý lớp học</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#exams">
+                            <a href="exam-schedule.html">
                                 <i class="fas fa-calendar-alt"></i>
                                 <span>Quản lý lịch thi</span>
                             </a>
@@ -166,20 +167,18 @@
                             <!-- Left Panel: Student List -->
                             <div class="student-list-panel">
                                 <div class="panel-header">
-                                    <div class="search-filter">
-                                        <div class="search-box">
+                                    <div class="custom-search-container">
+                                        <div class="custom-search-box">
                                             <i class="fas fa-search"></i>
                                             <input type="text" placeholder="Tìm kiếm học viên..." id="studentSearch">
                                         </div>
-                                        <select id="filterStudents">
+                                        <select class="custom-filter-dropdown" id="filterStudents">
                                             <option value="">Tất cả</option>
                                             <option value="active">Đang học</option>
                                             <option value="inactive">Tạm nghỉ</option>
                                             <option value="completed">Đã tốt nghiệp</option>
                                         </select>
-                                    </div>
-                                    <div class="panel-actions">
-                                        <button class="action-btn" id="addStudentBtn">
+                                        <button class="custom-add-button" id="addStudentBtn">
                                             <i class="fas fa-plus"></i> Thêm học viên
                                         </button>
                                     </div>

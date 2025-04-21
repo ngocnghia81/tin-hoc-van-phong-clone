@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="dashboard.css" />
         <link rel="stylesheet" href="class-management.css" />
+        <link rel="stylesheet" href="search-bar.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -65,7 +66,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#exams">
+                            <a href="exam-schedule.html">
                                 <i class="fas fa-calendar-alt"></i>
                                 <span>Quản lý lịch thi</span>
                             </a>
@@ -160,20 +161,18 @@
                             <!-- Left Panel: Class List -->
                             <div class="class-list-panel">
                                 <div class="panel-header">
-                                    <div class="search-filter">
-                                        <div class="search-box">
+                                    <div class="custom-search-container">
+                                        <div class="custom-search-box">
                                             <i class="fas fa-search"></i>
                                             <input type="text" placeholder="Tìm kiếm lớp học..." id="classSearch">
                                         </div>
-                                        <select id="filterClasses">
+                                        <select class="custom-filter-dropdown" id="filterClasses">
                                             <option value="">Tất cả</option>
                                             <option value="active">Sắp mở giảng</option>
-                                            <option value="ongoing">Đã kết thúc</option>
+                                            <option value="ongoing">Đang diễn ra</option>
                                             <option value="completed">Đã kết thúc</option>
                                         </select>
-                                    </div>
-                                    <div class="panel-actions">
-                                        <button class="action-btn" id="addClassBtn">
+                                        <button class="custom-add-button" id="addClassBtn">
                                             <i class="fas fa-plus"></i> Thêm lớp học
                                         </button>
                                     </div>
@@ -249,7 +248,7 @@
                             <!-- Right Panel: Class Details -->
                             <div class="class-details-panel">
                                 <div class="panel-header">
-                                    <h3>Thông tin chi tiết</h3>
+                                    <h3><i class="fas fa-info-circle"></i> Thông tin chi tiết</h3>
                                 </div>
                                 
                                 <div class="class-details">
@@ -334,15 +333,6 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="class-info-section">
-                                        <div class="section-header">
-                                            <h4><i class="fas fa-sticky-note"></i> Ghi chú</h4>
-                                        </div>
-                                        <div class="notes-area">
-                                            <textarea id="classNotes" placeholder="Nhập ghi chú về lớp học...">Lớp học đang tiến triển tốt. Cần bổ sung tài liệu về Laravel framework.</textarea>
                                         </div>
                                     </div>
                                     

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="dashboard.css" />
         <link rel="stylesheet" href="teacher-management.css" />
+        <link rel="stylesheet" href="search-bar.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -59,13 +60,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#classes">
+                            <a href="class-management.html">
                                 <i class="fas fa-chart-line"></i>
                                 <span>Quản lý lớp học</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#exams">
+                            <a href="exam-schedule.html">
                                 <i class="fas fa-calendar-alt"></i>
                                 <span>Quản lý lịch thi</span>
                             </a>
@@ -160,19 +161,17 @@
                             <!-- Left Panel: Teacher List -->
                             <div class="teacher-list-panel">
                                 <div class="panel-header">
-                                    <div class="search-filter">
-                                        <div class="search-box">
+                                    <div class="custom-search-container">
+                                        <div class="custom-search-box">
                                             <i class="fas fa-search"></i>
                                             <input type="text" placeholder="Tìm kiếm giảng viên..." id="teacherSearch">
                                         </div>
-                                        <select id="filterTeachers">
+                                        <select class="custom-filter-dropdown" id="filterTeachers">
                                             <option value="">Tất cả</option>
                                             <option value="active">Đang giảng dạy</option>
                                             <option value="inactive">Tạm nghỉ</option>
                                         </select>
-                                    </div>
-                                    <div class="panel-actions">
-                                        <button class="action-btn" id="addTeacherBtn">
+                                        <button class="custom-add-button" id="addTeacherBtn">
                                             <i class="fas fa-plus"></i> Thêm giảng viên
                                         </button>
                                     </div>

@@ -1,0 +1,479 @@
+/* Class Management Specific Styles */
+.content-wrapper {
+    padding: 1rem;
+}
+
+.content-header-title {
+    margin-bottom: 0.75rem;
+}
+
+.content-header-title h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.content-header-title p {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.class-management {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 0.75rem;
+}
+
+.tab-navigation {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 0.35rem 0.6rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tab-btn:hover {
+    background-color: #e9ecef;
+}
+
+.tab-btn.active {
+    background-color: #4361ee;
+    color: white;
+    border-color: #4361ee;
+}
+
+.class-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 0.75rem;
+}
+
+@media (max-width: 1200px) {
+    .class-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.class-list-panel, .class-details-panel {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 0.6rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.panel-header h3 {
+    font-size: 0.95rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.search-filter {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex: 1;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.35rem 0.35rem 0.35rem 1.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+select#filterClasses {
+    padding: 0.35rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.panel-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+#addClassBtn {
+    background-color: #4361ee;
+    color: white;
+}
+
+.class-table-container {
+    overflow-x: auto;
+}
+
+.class-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.class-table th, .class-table td {
+    padding: 0.5rem 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.8rem;
+}
+
+.class-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+.class-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.class-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.class-table tbody tr.selected {
+    background-color: #e6f7ff;
+    border-left: 3px solid #4361ee;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.15rem 0.35rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background-color: #e6f7ff;
+    color: #0070f3;
+}
+
+.status-badge.ongoing {
+    background-color: #fff8e6;
+    color: #f59f00;
+}
+
+.status-badge.completed {
+    background-color: #e6f7ee;
+    color: #37b24d;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.pagination-btn {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+}
+
+.pagination-btn.active {
+    background-color: #4361ee;
+    color: white;
+    border-color: #4361ee;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.class-details {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.class-info-section {
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 0.4rem 0.6rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-header h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.6rem;
+    padding: 0.6rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.info-item label {
+    font-size: 0.7rem;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 0.8rem;
+    color: #212529;
+}
+
+.student-list {
+    padding: 0.6rem;
+    overflow-x: auto;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-table th, .student-table td {
+    padding: 0.35rem 0.4rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.8rem;
+}
+
+.student-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.75rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.action-btn.primary {
+    background-color: #4361ee;
+    color: white;
+}
+
+.action-btn.warning {
+    background-color: #f59f00;
+    color: white;
+}
+
+.action-btn.danger {
+    background-color: #e03131;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding: 0.6rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.modal-body {
+    padding: 0.75rem;
+}
+
+.form-group {
+    margin-bottom: 0.6rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.35rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.cancel-btn, .submit-btn, .confirm-btn {
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.cancel-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.submit-btn {
+    background-color: #4361ee;
+    border: 1px solid #4361ee;
+    color: white;
+}
+
+.confirm-btn.danger {
+    background-color: #e03131;
+    border: 1px solid #e03131;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
