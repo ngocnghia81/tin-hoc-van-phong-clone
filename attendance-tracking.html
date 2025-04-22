@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Điểm Danh - TRUNG TÂM TIN HỌC ABC</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="dashboard.css" />
+        <link rel="stylesheet" href="teacher-info.css" />
+        <link rel="stylesheet" href="search-bar.css" />
+        <link rel="stylesheet" href="attendance-tracking.css" />
+        <link rel="stylesheet" href="action-buttons.css" />
+        <link rel="stylesheet" href="top-buttons.css" />
+        <link rel="stylesheet" href="sidebar-buttons.css" />
+        <link rel="stylesheet" href="password-change.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5ElEQVRYR8WXS2gTURSG/zOTNJW2aLUqKLgRBEFwISiCGxERXIgbQRQEQRRduBHcuFJ8IKKIj4ULceHCnSjiRsGFiAhuxIWIIFYUH1DFqtVqk5nxnJk7mTSTzEyK9C7Dvefc8/977jn33BvCMh9a5vhYGYCgXH8EQGMZk1ohhBhz9l0SQKW+F8BpAKMANIBWAXQJwEkAl5IkuVuNJzXAtu1TAC4A0Gb5kSQGcBjA+SiKTjUCqQvgOM5xAJeagJcgBHJEKXWlnk9NgGw2u0FKOQlgfZPgDsQDpdQW13WnF/OtCmBZ1l0AexcZvJLbHaXUvlpeFQCWZW0G8HyJwR2Yj0qpLY7jfK4GUgFgmuZRIcT1FoE7bkeUUjeqQcwDME3zABHdaTG4474gDMObC0EqAEzT3E1Ej9oE7kDsCYLgSbVnMw9g2/ZGIcRUB8DnIKSUm7LZ7OdKkDkA0zRNInrRQXAHYlsQBJPlEHMAhmFcJKJjHQZ3IA4GQXBpAUChUDiulLrYJXAH4kAYhtdmARzH2QngSRfBHYjdURQ9nQGwbXs9Eb3tMrgDsS2Kog+aZVmbiOhTAsAdpVS/lPKXEOJZHMfXwjB8UCwWNwohDhHRHgDbAaxNAH5KKbfkcrnPWqlUWiOl/JEAsBRCrJJSzhDRKgDbhBDH4jg+G0XRnWKxuFoIcYSIRgBsTgJeKpX6tRDiexLAUsrVWuufRLSaiLYS0ZEkSc5FUXRbgud5fQMDA1NE1JcEfBAEA1prVSwWNwghvnULQAixIUmSM2EY3tJzHvI8b3RwcPBVkieklBoOw/CVnvvQ9/3Rvr6+V0mBCCG2R1H0WM95yPO8kYGBgZdJghDR7jAMH+k5gFKptC+O4ztJghDRvjAM7+lqgbTWI1LKe0mCENH+MAzvz9SBXq+3t1AoTBBRf5IgWutDuVzuwWwd6PV6e/L5/AQRbUoSpFwuH87n8w9n68ByfpD+9wfJX2QfYkKBHUPEAAAAAElFTkSuQmCC" />
+    </head>
+    <body class="dashboard-body">
+        <div class="dashboard-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>TIN HỌC ABC</h2>
+                </div>
+                
+                <div class="sidebar-user">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="sidebarUserName">Trần Trọng Hải</h3>
+                        <span class="user-role" id="sidebarUserRole">Giảng viên</span>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="teacher-dashboard.html">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-schedule.html">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Lịch dạy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="grade-entry.html">
+                                <i class="fas fa-edit"></i>
+                                <span>Nhập điểm</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="attendance-tracking.html">
+                                <i class="fas fa-clipboard-check"></i>
+                                <span>Điểm danh</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-password.html">                                <i class="fas fa-key"></i>
+                                <span>Thay đổi mật khẩu</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Đăng xuất</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <header class="content-header">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="header-title">
+                        <h1>ĐIỂM DANH</h1>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn top-btn">
+                            <i class="far fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <button class="action-btn top-btn">
+                            <i class="far fa-envelope"></i>
+                            <span class="badge">5</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="headerUserName">Trần Trọng Hải</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="teacher-info.html"><i class="fas fa-user"></i> Thông tin cá nhân</a>
+                                <a href="#settings"><i class="fas fa-cog"></i> Cài đặt</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="content-wrapper">
+                    <!-- Attendance Tracking Section -->
+                    <div class="schedule-container">
+                        <div class="schedule-header">
+                            <div class="schedule-title">
+                                <i class="fas fa-clipboard-check"></i>
+                                <h2>ĐIỂM DANH</h2>
+                            </div>
+                            <div class="schedule-actions">
+                                <button class="btn-save">
+                                    <i class="fas fa-save"></i>
+                                    Lưu điểm danh
+                                </button>
+                                <button class="btn-print">
+                                    <i class="fas fa-print"></i>
+                                    In báo cáo
+                                </button>
+                                <button class="btn-export">
+                                    <i class="fas fa-download"></i>
+                                    Xuất Excel
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="attendance-container">
+                            <div class="filter-section">
+                                <div class="filter-row">
+                                    <div class="filter-group">
+                                        <label for="classSelect">Lớp học:</label>
+                                        <select id="classSelect" class="filter-select">
+                                            <option value="">-- Chọn lớp học --</option>
+                                            <option value="ttms">Lớp TT MS</option>
+                                            <option value="cb01">CB01</option>
+                                            <option value="cb02">CB02</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="filter-group">
+                                        <button id="searchBtn" class="search-btn top-btn">
+                                            <i class="fas fa-search"></i> Tìm kiếm
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="attendance-details">
+                                <h3>Chi tiết điểm danh</h3>
+                                
+                                <div class="attendance-table-container">
+                                    <table class="attendance-table">
+                                        <thead>
+                                            <tr class="header-row">
+                                                <th rowspan="2" class="student-col">Học sinh</th>
+                                                <th colspan="2" class="session-col">
+                                                    <div class="session-header">
+                                                        <span>Buổi 2</span>
+                                                        <span class="session-date">14/2018</span>
+                                                    </div>
+                                                </th>
+                                                <th colspan="2" class="session-col">
+                                                    <div class="session-header">
+                                                        <span>Buổi 3</span>
+                                                        <span class="session-date">13/04/2018</span>
+                                                    </div>
+                                                </th>
+                                                <th colspan="2" class="session-col">
+                                                    <div class="session-header">
+                                                        <span>Buổi 4</span>
+                                                        <span class="session-date">13/04/2018</span>
+                                                    </div>
+                                                </th>
+                                                <th colspan="2" class="session-col">
+                                                    <div class="session-header">
+                                                        <span>Buổi 5</span>
+                                                        <span class="session-date">16/04/2018</span>
+                                                    </div>
+                                                </th>
+                                                <th colspan="2" class="session-col">
+                                                    <div class="session-header">
+                                                        <span>Buổi 6</span>
+                                                        <span class="session-date">17/04/2018</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="student-row">
+                                                <td class="student-name">
+                                                    <div class="student-info">
+                                                        <span>Lê Văn Ba</span>
+                                                        <a href="#" class="detail-btn">Xem Chi tiết</a>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-excused">Nghỉ có phép</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="student-row">
+                                                <td class="student-name">
+                                                    <div class="student-info">
+                                                        <span>Linh</span>
+                                                        <a href="#" class="detail-btn">Xem Chi tiết</a>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                            </tr>
+                                            <tr class="student-row">
+                                                <td class="student-name">
+                                                    <div class="student-info">
+                                                        <span>Lê Đình Khương</span>
+                                                        <a href="#" class="detail-btn">Xem Chi tiết</a>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Học bù</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                            </tr>
+                                            <tr class="student-row">
+                                                <td class="student-name">
+                                                    <div class="student-info">
+                                                        <span>Lê Đình Tùng</span>
+                                                        <a href="#" class="detail-btn">Xem Chi tiết</a>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                            </tr>
+                                            <tr class="student-row">
+                                                <td class="student-name">
+                                                    <div class="student-info">
+                                                        <span>Nghiêm Văn Thịnh</span>
+                                                        <a href="#" class="detail-btn">Xem Chi tiết</a>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status"></td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                                <td colspan="2" class="attendance-status">
+                                                    <span class="status-present">Có</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="pagination">
+                                    <button class="pagination-btn prev top-btn">
+                                        <i class="fas fa-chevron-left"></i> Trước
+                                    </button>
+                                    <div class="page-numbers">
+                                        <span class="page active">1</span>
+                                        <span class="page">2</span>
+                                        <span class="page">3</span>
+                                    </div>
+                                    <button class="pagination-btn next top-btn">
+                                        Sau <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <footer class="content-footer">
+                    <p>&copy; 2025 TRUNG TÂM TIN HỌC ABC. Tất cả quyền được bảo lưu.</p>
+                </footer>
+            </main>
+        </div>
+        <!-- JavaScript -->
+        <script src="attendance-tracking.js"></script>
+        <script src="password-change.js"></script>
+    </body>
+</html>

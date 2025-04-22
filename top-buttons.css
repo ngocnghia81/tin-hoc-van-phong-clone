@@ -1,0 +1,65 @@
+/* Top Action Buttons Styles */
+.schedule-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Export buttons like "Lưu điểm", "In bảng điểm", "Xuất Excel" */
+button[class^="btn-"], 
+button.btn-save, 
+button.btn-print, 
+button.btn-export {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #f8f9fc;
+    border: 1px solid #d1d3e2;
+    border-radius: 4px;
+    color: #5a5c69;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 5px;
+}
+
+button[class^="btn-"]:hover, 
+button.btn-save:hover, 
+button.btn-print:hover, 
+button.btn-export:hover {
+    background-color: #eaecf4;
+}
+
+button[class^="btn-"] i, 
+button.btn-save i, 
+button.btn-print i, 
+button.btn-export i {
+    margin-right: 6px;
+}
+
+/* Specific button styling */
+.btn-save {
+    background-color: #4e73df;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #3a5fc8;
+}
+
+.btn-print {
+    background-color: #5a5c69;
+    color: white;
+}
+
+.btn-print:hover {
+    background-color: #484a54;
+}
+
+.btn-export {
+    background-color: #1cc88a;
+    color: white;
+}
+
+.btn-export:hover {
+    background-color: #18a978;
+}

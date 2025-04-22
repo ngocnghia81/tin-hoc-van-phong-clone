@@ -9,6 +9,12 @@
         <link rel="stylesheet" href="teacher-info.css" />
         <link rel="stylesheet" href="teacher-schedule.css" />
         <link rel="stylesheet" href="search-bar.css" />
+        <link rel="stylesheet" href="grade-entry.css" />
+        <link rel="stylesheet" href="attendance-tracking.css" />
+        <link rel="stylesheet" href="action-buttons.css" />
+        <link rel="stylesheet" href="top-buttons.css" />
+        <link rel="stylesheet" href="sidebar-buttons.css" />
+        <link rel="stylesheet" href="password-change.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -42,53 +48,35 @@
                 
                 <nav class="sidebar-nav">
                     <ul>
-                        <li class="active">
+                        <li>
                             <a href="teacher-dashboard.html">
                                 <i class="fas fa-tachometer-alt"></i>
                                 <span>Trang chủ</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="teacher-schedule.html">
                                 <i class="fas fa-calendar-alt"></i>
                                 <span>Lịch dạy</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#grades">
+                            <a href="grade-entry.html">
                                 <i class="fas fa-edit"></i>
                                 <span>Nhập điểm</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#attendance">
+                            <a href="attendance-tracking.html">
                                 <i class="fas fa-clipboard-check"></i>
                                 <span>Điểm danh</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#classes">
-                                <i class="fas fa-chalkboard"></i>
-                                <span>Lớp học</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#students">
-                                <i class="fas fa-user-graduate"></i>
-                                <span>Học viên</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#materials">
-                                <i class="fas fa-book"></i>
-                                <span>Tài liệu</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#password">
+                            <a href="teacher-password.html">
                                 <i class="fas fa-key"></i>
                                 <span>Thay đổi mật khẩu</span>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -234,7 +222,20 @@
                                 
                                 <!-- Monday Column -->
                                 <div class="day-slots" id="monday-slots">
-                                    <!-- Class events will be added by JavaScript -->
+                                    <div class="class-event" style="top: 120px; height: 120px;">
+                                        <div class="event-content">
+                                            <h4>Excel cơ bản</h4>
+                                            <p>8:00 - 10:00</p>
+                                            <p>Phòng 101</p>
+                                        </div>
+                                    </div>
+                                    <div class="class-event" style="top: 600px; height: 120px;">
+                                        <div class="event-content">
+                                            <h4>Word nâng cao</h4>
+                                            <p>18:00 - 20:00</p>
+                                            <p>Phòng 203</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <!-- Tuesday Column -->
@@ -244,7 +245,13 @@
                                 
                                 <!-- Wednesday Column -->
                                 <div class="day-slots" id="wednesday-slots">
-                                    <!-- Class events will be added by JavaScript -->
+                                    <div class="class-event" style="top: 360px; height: 120px;">
+                                        <div class="event-content">
+                                            <h4>PowerPoint</h4>
+                                            <p>14:00 - 16:00</p>
+                                            <p>Phòng 102</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <!-- Thursday Column -->
@@ -254,12 +261,24 @@
                                 
                                 <!-- Friday Column -->
                                 <div class="day-slots" id="friday-slots">
-                                    <!-- Class events will be added by JavaScript -->
+                                    <div class="class-event" style="top: 600px; height: 120px;">
+                                        <div class="event-content">
+                                            <h4>Access cơ bản</h4>
+                                            <p>18:00 - 20:00</p>
+                                            <p>Phòng 205</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <!-- Saturday Column -->
                                 <div class="day-slots" id="saturday-slots">
-                                    <!-- Class events will be added by JavaScript -->
+                                    <div class="class-event" style="top: 240px; height: 180px;">
+                                        <div class="event-content">
+                                            <h4>Excel nâng cao</h4>
+                                            <p>10:00 - 13:00</p>
+                                            <p>Phòng 301</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <!-- Sunday Column -->
@@ -554,7 +573,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Upload Avatar Modal -->
         <div class="modal" id="uploadAvatarModal">
             <div class="modal-content">
@@ -577,44 +596,59 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Class Details Modal -->
         <div class="modal" id="classModal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="modalTitle">Excel cơ bản</h3>
-                    <button class="close-modal">&times;</button>
+                    <h2>Chi tiết lớp học</h2>
+                    <button class="close-btn" id="closeClassModal">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <div class="class-details-grid">
+                    <div class="class-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Tên lớp:</span>
+                            <span class="detail-value" id="className">Lớp Tin học văn phòng CB01</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Khóa học:</span>
+                            <span class="detail-value" id="courseName">Tin học văn phòng cơ bản</span>
+                        </div>
                         <div class="detail-item">
                             <span class="detail-label">Thời gian:</span>
-                            <span class="detail-value" id="modalTime">8:00 - 10:00</span>
+                            <span class="detail-value" id="classTime">Thứ 2, 4, 6 (18:00 - 20:00)</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Ngày:</span>
-                            <span class="detail-value" id="modalDate">21/04/2025</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Phòng:</span>
-                            <span class="detail-value" id="modalRoom">Phòng 101</span>
+                            <span class="detail-label">Phòng học:</span>
+                            <span class="detail-value" id="classRoom">P.305</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Số học viên:</span>
-                            <span class="detail-value" id="modalStudents">15 học viên</span>
+                            <span class="detail-value" id="studentCount">25/30</span>
                         </div>
-                    </div>
-                    <div class="class-description" id="modalDescription">
-                        <p>Khóa học Excel cơ bản dành cho người mới bắt đầu. Học viên sẽ được hướng dẫn các kỹ năng cơ bản để sử dụng Excel hiệu quả trong công việc.</p>
+                        <div class="detail-item">
+                            <span class="detail-label">Ngày bắt đầu:</span>
+                            <span class="detail-value" id="startDate">15/04/2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Ngày kết thúc:</span>
+                            <span class="detail-value" id="endDate">15/07/2025</span>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-secondary cancel-btn">Đóng</button>
-                    <button class="btn-primary" id="attendanceBtn">Điểm danh</button>
+                    <button class="modal-btn primary">Xem danh sách học viên</button>
+                    <button class="modal-btn secondary" id="closeClassModalBtn">Đóng</button>
                 </div>
             </div>
         </div>
-        
+
+        <!-- JavaScript for Grade Entry -->
+        <script src="grade-entry.js"></script>
         <script src="teacher-schedule.js"></script>
+        <script src="attendance-tracking.js"></script>
+        <script src="password-change.js"></script>
     </body>
 </html>

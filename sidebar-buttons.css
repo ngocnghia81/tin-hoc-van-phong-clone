@@ -1,0 +1,45 @@
+/* Sidebar Button Styles */
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-btn i {
+    margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-btn span {
+    flex: 1;
+}
+
+/* Password change trigger button specific styles */
+.password-change-trigger {
+    color: white;
+    font-weight: 500;
+}
+
+.password-change-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.password-change-trigger i {
+    color: #ffc107;
+}

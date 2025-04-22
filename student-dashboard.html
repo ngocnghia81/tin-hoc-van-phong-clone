@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang Cá Nhân - TRUNG TÂM TIN HỌC ABC</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="dashboard.css" />
+        <link rel="stylesheet" href="student-dashboard.css" />
+        <link rel="stylesheet" href="search-bar.css" />
+        <link rel="stylesheet" href="action-buttons.css" />
+        <link rel="stylesheet" href="top-buttons.css" />
+        <link rel="stylesheet" href="sidebar-buttons.css" />
+        <link rel="stylesheet" href="password-change.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5ElEQVRYR8WXS2gTURSG/zOTNJW2aLUqKLgRBEFwISiCGxERXIgbQRQEQRRduBHcuFJ8IKKIj4ULceHCnSjiRsGFiAhuxIWIIFYUH1DFqtVqk5nxnJk7mTSTzEyK9C7Dvefc8/977jn33BvCMh9a5vhYGYCgXH8EQGMZk1ohhBhz9l0SQKW+F8BpAKMANIBWAXQJwEkAl5IkuVuNJzXAtu1TAC4A0Gb5kSQGcBjA+SiKTjUCqQvgOM5xAJeagJcgBHJEKXWlnk9NgGw2u0FKOQlgfZPgDsQDpdQW13WnF/OtCmBZ1l0AexcZvJLbHaXUvlpeFQCWZW0G8HyJwR2Yj0qpLY7jfK4GUgFgmuZRIcT1FoE7bkeUUjeqQcwDME3zABHdaTG4474gDMObC0EqAEzT3E1Ej9oE7kDsCYLgSbVnMw9g2/ZGIcRUB8DnIKSUm7LZ7OdKkDkA0zRNInrRQXAHYlsQBJPlEHMAhmFcJKJjHQZ3IA4GQXBpAUChUDiulLrYJXAH4kAYhtdmARzH2QngSRfBHYjdURQ9nQGwbXs9Eb3tMrgDsS2Kog+aZVmbiOhTAsAdpVS/lPKXEOJZHMfXwjB8UCwWNwohDhHRHgDbAaxNAH5KKbfkcrnPWqlUWiOl/JEAsBRCrJJSzhDRKgDbhBDH4jg+G0XRnWKxuFoIcYSIRgBsTgJeKpX6tRDiexLAUsrVWuufRLSaiLYS0ZEkSc5FUXRbgud5fQMDA1NE1JcEfBAEA1prVSwWNwghvnULQAixIUmSM2EY3tJzHvI8b3RwcPBVkieklBoOw/CVnvvQ9/3Rvr6+V0mBCCG2R1H0WM95yPO8kYGBgZdJghDR7jAMH+k5gFKptC+O4ztJghDRvjAM7+lqgbTWI1LKe0mCENH+MAzvz9SBXq+3t1AoTBBRf5IgWutDuVzuwWwd6PV6e/L5/AQRbUoSpFwuH87n8w9n68ByfpD+9wfJX2QfYkKBHUPEAAAAAElFTkSuQmCC" />
+    </head>
+    <body class="dashboard-body">
+        <div class="dashboard-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-user">
+                        <div class="user-name center-text">Phan Thị Ái Ái</div>
+                        <div class="user-avatar">
+                            <img src="images/avatars/AiAi.png" alt="Phan Thị Ái Ái" class="avatar-img">
+                        </div>
+                        <div class="user-role center-text">Học viên</div>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="student-dashboard.html" class="active">
+                                <i class="fas fa-home"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="student-info.html">
+                                <i class="fas fa-user"></i>
+                                <span>Thông tin học viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="student-schedule.html">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Lịch học</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="student-results.html">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Kết quả học tập</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="student-password.html">
+                                <i class="fas fa-key"></i>
+                                <span>Thay đổi mật khẩu</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Đăng xuất</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <header class="content-header">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="header-title">
+                        <h1>TRANG CÁ NHÂN</h1>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <i class="far fa-bell"></i>
+                            <span class="badge">2</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-envelope"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="headerUserName">Phan Thị Ái Ái</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="student-info.html"><i class="fas fa-user"></i> Thông tin cá nhân</a>
+                                <a href="student-password.html"><i class="fas fa-key"></i> Thay đổi mật khẩu</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="content-wrapper">
+                    <!-- Dashboard Overview -->
+                    <div class="dashboard-overview">
+                        <div class="overview-header">
+                            <h2>Xin chào, Phan Thị Ái Ái!</h2>
+                            <p>Chào mừng bạn đến với Trung tâm Tin học ABC</p>
+                        </div>
+                        
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>2</h3>
+                                    <p>Khóa học đang tham gia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>85%</h3>
+                                    <p>Tỷ lệ tham gia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>8.5</h3>
+                                    <p>Điểm trung bình</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>1</h3>
+                                    <p>Chứng chỉ đạt được</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Upcoming Classes -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-calendar-alt"></i> Lịch học sắp tới</h2>
+                            <a href="student-schedule.html" class="view-all">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="class-cards">
+                            <div class="class-card">
+                                <div class="class-date">
+                                    <span class="day">24</span>
+                                    <span class="month">Tháng 4</span>
+                                </div>
+                                <div class="class-info">
+                                    <h3>MS Excel Nâng Cao</h3>
+                                    <p><i class="fas fa-clock"></i> 18:00 - 20:00</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Phòng 305</p>
+                                    <p><i class="fas fa-user"></i> Giảng viên: Nguyễn Thị Thanh Diệu</p>
+                                </div>
+                                <div class="class-status">
+                                    <span class="status-badge upcoming">Sắp diễn ra</span>
+                                </div>
+                            </div>
+                            
+                            <div class="class-card">
+                                <div class="class-date">
+                                    <span class="day">26</span>
+                                    <span class="month">Tháng 4</span>
+                                </div>
+                                <div class="class-info">
+                                    <h3>Thiết kế đồ họa cơ bản</h3>
+                                    <p><i class="fas fa-clock"></i> 18:00 - 20:00</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Phòng 302</p>
+                                    <p><i class="fas fa-user"></i> Giảng viên: Nguyễn Thị Thùy Dương</p>
+                                </div>
+                                <div class="class-status">
+                                    <span class="status-badge upcoming">Sắp diễn ra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Results -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-chart-line"></i> Kết quả học tập gần đây</h2>
+                            <a href="student-results.html" class="view-all">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="results-table-container">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Khóa học</th>
+                                        <th>Bài kiểm tra</th>
+                                        <th>Ngày</th>
+                                        <th>Điểm</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MS Excel Nâng Cao</td>
+                                        <td>Bài kiểm tra giữa kỳ</td>
+                                        <td>15/04/2025</td>
+                                        <td>8.5/10</td>
+                                        <td><span class="status-badge passed">Đạt</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thiết kế đồ họa cơ bản</td>
+                                        <td>Bài tập thực hành 2</td>
+                                        <td>10/04/2025</td>
+                                        <td>9.0/10</td>
+                                        <td><span class="status-badge passed">Đạt</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS Excel Nâng Cao</td>
+                                        <td>Bài tập thực hành 3</td>
+                                        <td>05/04/2025</td>
+                                        <td>7.5/10</td>
+                                        <td><span class="status-badge passed">Đạt</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Announcements -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-bullhorn"></i> Thông báo</h2>
+                        </div>
+                        
+                        <div class="announcements-container">
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <h3>Lịch thi cuối kỳ học phần MS Excel Nâng Cao</h3>
+                                    <span class="announcement-date">20/04/2025</span>
+                                </div>
+                                <div class="announcement-content">
+                                    <p>Thông báo lịch thi cuối kỳ học phần MS Excel Nâng Cao sẽ diễn ra vào ngày 05/05/2025. Các học viên chuẩn bị ôn tập và có mặt đúng giờ tại phòng thi.</p>
+                                </div>
+                                <div class="announcement-footer">
+                                    <a href="#" class="read-more">Xem chi tiết</a>
+                                </div>
+                            </div>
+                            
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <h3>Thay đổi lịch học Thiết kế đồ họa cơ bản</h3>
+                                    <span class="announcement-date">18/04/2025</span>
+                                </div>
+                                <div class="announcement-content">
+                                    <p>Thông báo thay đổi lịch học môn Thiết kế đồ họa cơ bản. Buổi học ngày 25/04/2025 sẽ được chuyển sang ngày 26/04/2025 cùng giờ, cùng phòng.</p>
+                                </div>
+                                <div class="announcement-footer">
+                                    <a href="#" class="read-more">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <footer class="content-footer">
+                    <p>&copy; 2025 TRUNG TÂM TIN HỌC ABC. Tất cả quyền được bảo lưu.</p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="student-dashboard.js"></script>
+    </body>
+</html>

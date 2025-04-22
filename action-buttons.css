@@ -1,0 +1,145 @@
+/* Action Buttons Styles */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 14px;
+}
+
+.action-btn i {
+    margin-right: 8px;
+}
+
+.action-btn.primary-btn {
+    background-color: #4e73df;
+    color: white;
+}
+
+.action-btn.primary-btn:hover {
+    background-color: #3a5fc8;
+}
+
+.action-btn.success-btn, 
+.action-btn.confirm-btn {
+    background-color: #1cc88a;
+    color: white;
+}
+
+.action-btn.success-btn:hover,
+.action-btn.confirm-btn:hover {
+    background-color: #18a978;
+}
+
+.action-btn.danger-btn {
+    background-color: #e74a3b;
+    color: white;
+}
+
+.action-btn.danger-btn:hover {
+    background-color: #d13a2c;
+}
+
+.action-btn.warning-btn {
+    background-color: #f6c23e;
+    color: white;
+}
+
+.action-btn.warning-btn:hover {
+    background-color: #e5b43a;
+}
+
+.action-btn.info-btn {
+    background-color: #36b9cc;
+    color: white;
+}
+
+.action-btn.info-btn:hover {
+    background-color: #2fa8b9;
+}
+
+/* Button group styles */
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Export buttons */
+.export-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #f8f9fc;
+    border: 1px solid #d1d3e2;
+    border-radius: 4px;
+    color: #5a5c69;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.export-btn:hover {
+    background-color: #eaecf4;
+}
+
+.export-btn i {
+    margin-right: 6px;
+}
+
+/* Schedule buttons at the top of pages */
+.schedule-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.schedule-btn i {
+    margin-right: 8px;
+}
+
+.schedule-btn.primary {
+    background-color: #4e73df;
+    color: white;
+}
+
+.schedule-btn.primary:hover {
+    background-color: #3a5fc8;
+}
+
+.schedule-btn.secondary {
+    background-color: #5a5c69;
+    color: white;
+}
+
+.schedule-btn.secondary:hover {
+    background-color: #484a54;
+}
+
+.schedule-btn.success {
+    background-color: #1cc88a;
+    color: white;
+}
+
+.schedule-btn.success:hover {
+    background-color: #18a978;
+}
