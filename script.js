@@ -273,10 +273,112 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Add to cart button handling
+    document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+        button.addEventListener("click", function() {
+            const courseInfo = this.closest(".course-item");
+            const courseId = courseInfo.dataset.course;
+            
+            // Get all info-row elements
+            const infoRows = courseInfo.querySelectorAll('.info-row');
+            
+            // Extract course information from the correct rows
+            const courseName = infoRows[0].querySelector('.value').textContent;
+            const courseTime = infoRows[1].querySelector('.value').textContent;
+            const startDate = infoRows[2].querySelector('.value').textContent;
+            const courseLocation = infoRows[3].querySelector('.value').textContent;
+            
+            const coursePriceText = courseInfo.querySelector(".course-price").textContent;
+            const coursePrice = parseInt(coursePriceText.replace(/[^\d]/g, ''));
+            
+            // Determine icon based on course type
+            let courseIcon = 'fas fa-graduation-cap';
+            if (courseInfo.querySelector(".course-type-badge.online")) {
+                courseIcon = 'fas fa-video';
+            } else if (courseInfo.querySelector(".course-type-badge.advanced")) {
+                courseIcon = 'fas fa-laptop-code';
+            }
+            
+            // Create cart item
+            const cartItem = {
+                id: courseId,
+                name: courseName,
+                schedule: courseTime,
+                startDate: startDate,
+                location: courseLocation,
+                price: coursePrice,
+                icon: courseIcon
+            };
+            
+            // Add to cart if shoppingCart exists
+            if (typeof window.shoppingCart !== 'undefined') {
+                window.shoppingCart.addItem(cartItem);
+            } else {
+                // Fallback if shopping cart module is not loaded
+                alert("Đã thêm khóa học " + courseName + " vào giỏ hàng!");
+                
+                // Redirect to shopping cart page
+                setTimeout(() => {
+                    window.location.href = "shopping-cart.html";
+                }, 1000);
+            }
+        });
+    });
+    
+    // Buy now button handling
+    document.querySelectorAll(".buy-now-btn").forEach((button) => {
+        button.addEventListener("click", function() {
+            const courseInfo = this.closest(".course-item");
+            const courseId = courseInfo.dataset.course;
+            
+            // Get all info-row elements
+            const infoRows = courseInfo.querySelectorAll('.info-row');
+            
+            // Extract course information from the correct rows
+            const courseName = infoRows[0].querySelector('.value').textContent;
+            const courseTime = infoRows[1].querySelector('.value').textContent;
+            const startDate = infoRows[2].querySelector('.value').textContent;
+            const courseLocation = infoRows[3].querySelector('.value').textContent;
+            
+            const coursePriceText = courseInfo.querySelector(".course-price").textContent;
+            const coursePrice = parseInt(coursePriceText.replace(/[^\d]/g, ''));
+            
+            // Determine icon based on course type
+            let courseIcon = 'fas fa-graduation-cap';
+            if (courseInfo.querySelector(".course-type-badge.online")) {
+                courseIcon = 'fas fa-video';
+            } else if (courseInfo.querySelector(".course-type-badge.advanced")) {
+                courseIcon = 'fas fa-laptop-code';
+            }
+            
+            // Create cart item
+            const cartItem = {
+                id: courseId,
+                name: courseName,
+                schedule: courseTime,
+                startDate: startDate,
+                location: courseLocation,
+                price: coursePrice,
+                icon: courseIcon
+            };
+            
+            // Add to cart if shoppingCart exists and redirect to checkout
+            if (typeof window.shoppingCart !== 'undefined') {
+                window.shoppingCart.addItem(cartItem);
+                window.location.href = "shopping-cart.html";
+            } else {
+                // Fallback if shopping cart module is not loaded
+                alert("Đang chuyển đến trang thanh toán cho khóa học " + courseName);
+                window.location.href = "shopping-cart.html";
+            }
+        });
+    });
+    
     // Registration modal handling
     document.querySelectorAll(".register-btn").forEach((button) => {
         button.addEventListener("click", function () {
             const courseInfo = this.closest(".course-item");
+            const courseId = courseInfo.dataset.course;
             const courseName = courseInfo.querySelector(
                 ".info-row:first-child .value"
             ).textContent;
@@ -289,8 +391,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const courseLocation = courseInfo.querySelector(
                 ".info-row:last-child .value"
             ).textContent;
-            const coursePrice =
-                courseInfo.querySelector(".course-price").textContent;
+            const coursePriceText = courseInfo.querySelector(".course-price").textContent;
+            const coursePrice = parseInt(coursePriceText.replace(/[^\d]/g, ''));
+            
+            // Determine icon based on course type
+            let courseIcon = 'fas fa-graduation-cap';
+            if (courseInfo.querySelector(".course-type-badge.online")) {
+                courseIcon = 'fas fa-video';
+            } else if (courseInfo.querySelector(".course-type-badge.advanced")) {
+                courseIcon = 'fas fa-laptop-code';
+            }
 
             const modal = document.createElement("div");
             modal.className = "modal";
@@ -334,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <i class="fas fa-tag"></i>
                                 <div>
                                     <label>Học phí:</label>
-                                    <span>${coursePrice}</span>
+                                    <span>${coursePriceText}</span>
                                 </div>
                             </div>
                         </div>
@@ -347,6 +457,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             </a>
                             <button class="contact-btn register">
                                 <i class="fas fa-user-plus"></i> Đăng ký online
+                            </button>
+                            <button class="contact-btn add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
                             </button>
                         </div>
                     </div>
@@ -361,6 +474,29 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.addEventListener("click", (e) => {
                 if (e.target === modal) modal.remove();
             });
+            
+            // Add to cart button handling
+            const addToCartBtn = modal.querySelector(".contact-btn.add-to-cart");
+            if (addToCartBtn && typeof window.shoppingCart !== 'undefined') {
+                addToCartBtn.addEventListener("click", () => {
+                    // Create cart item
+                    const cartItem = {
+                        id: courseId,
+                        name: courseName,
+                        schedule: courseTime,
+                        startDate: startDate,
+                        location: courseLocation,
+                        price: coursePrice,
+                        icon: courseIcon
+                    };
+                    
+                    // Add to cart
+                    window.shoppingCart.addItem(cartItem);
+                    
+                    // Close modal
+                    modal.remove();
+                });
+            }
 
             // Register button handling
             const registerBtn = modal.querySelector(".contact-btn.register");
@@ -868,6 +1004,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize authentication system
     authSystem.init();
+    
+    // Initialize shopping cart
+    if (typeof shoppingCart !== 'undefined') {
+        shoppingCart.init();
+    }
 
     // Back to top button
     const backToTopButton = document.createElement("a");

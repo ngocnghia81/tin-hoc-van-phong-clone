@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1420px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1419,6 +1419,63 @@ footer {
 
 .abc-btn i {
     font-size: 18px;
+}
+
+/* Course Buttons */
+.course-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-to-cart-btn, .buy-now-btn, .register-btn {
+    width: 100%;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0b7dda;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.buy-now-btn {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+}
+
+.buy-now-btn:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(238, 9, 121, 0.2);
+}
+
+.register-btn {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    margin-top: 15px;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(238, 9, 121, 0.2);
 }
 
 /* Auth Forms */

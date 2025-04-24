@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giỏ hàng - TRUNG TÂM TIN HỌC ABC</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="shopping-cart.css" />
+        <link rel="stylesheet" href="login-notification.css" />
+        <link rel="stylesheet" href="navbar.css" />
+        <link rel="stylesheet" href="cart-badge.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5ElEQVRYR8WXS2gTURSG/zOTNJW2aLUqKLgRBEFwISiCGxERXIgbQRQEQRRduBHcuFJ8IKKIj4ULceHCnSjiRsGFiAhuxIWIIFYUH1DFqtVqk5nxnJk7mTSTzEyK9C7Dvefc8/977jn33BvCMh9a5vhYGYCgXH8EQGMZk1ohhBhz9l0SQKW+F8BpAKMANIBWAXQJwEkAl5IkuVuNJzXAtu1TAC4A0Gb5kSQGcBjA+SiKTjUCqQvgOM5xAJeagJcgBHJEKXWlnk9NgGw2u0FKOQlgfZPgDsQDpdQW13WnF/OtCmBZ1l0AexcZvJLbHaXUvlpeFQCWZW0G8HyJwR2Yj0qpLY7jfK4GUgFgmuZRIcT1FoE7bkeUUjeqQcwDME3zABHdaTG4434gDMObC0EqAEzT3E1Ej9oE7kDsCYLgSbVnMw9g2/ZGIcRUB8DnIKSUm7LZ7OdKkDkA0zRNInrRQXAHYlsQBJPlEHMAhmFcJKJjHQZ3IA4GQXBpAUChUDiulLrYJXAH4kAYhtdmARzH2QngSRfBHYjdURQ9nQGwbXs9Eb3tMrgDsS2Kog+aZVmbiOhTAsAdpVS/lPKXEOJZHMfXwjB8UCwWNwohDhHRHgDbAaxNAH5KKbfkcrnPWqlUWiOl/JEAsBRCrJJSzhDRKgDbhBDH4jg+G0XRnWKxuFoIcYSIRgBsTgJeKpX6tRDiexLAUsrVWuufRLSaiLYS0ZEkSc5FUXRbgud5fQMDA1NE1JcEfBAEA1prVSwWNwghvnULQAixIUmSM2EY3tJzHvI8b3RwcPBVkieklBoOw/CVnvvQ9/3Rvr6+V0mBCCG2R1H0WM95yPO8kYGBgZdJghDR7jAMH+k5gFKptC+O4ztJghDRvjAM7+lqgbTWI1LKe0mCENH+MAzvz9SBXq+3t1AoTBBRf5IgWutDuVzuwWwd6PV6e/L5/AQRbUoSpFwuH87n8w9n68ByfpD+9wfJX2QfYkKBHUPEAAAAAElFTkSuQmCC"
+        />
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        <header>
+            <nav class="top-nav">
+                <div class="nav-container">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="site-title">
+                            <h1 class="site-name">TRUNG TÂM TIN HỌC ABC</h1>
+                            <p class="site-description">Đào tạo tin học chuyên nghiệp</p>
+                        </div>
+                    </div>
+                    
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <ul class="nav-links" id="nav-links">
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-home"></i> Trang chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">
+                                <i class="fas fa-info-circle"></i> Giới thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#courses">
+                                <i class="fas fa-graduation-cap"></i> Khóa học
+                                <i class="fas fa-chevron-down dropdown-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#schedule">
+                                <i class="fas fa-calendar-alt"></i> Lịch khai giảng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#news">
+                                <i class="fas fa-newspaper"></i> Tin tức
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">
+                                <i class="fas fa-phone-alt"></i> Liên hệ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shopping-cart.html" class="active">
+                                <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                                <span id="cart-count-nav" class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="page-title">
+            <div class="container">
+                <h1>Giỏ hàng của bạn</h1>
+                <p class="subtitle">
+                    Xem lại và thanh toán các khóa học đã chọn
+                </p>
+            </div>
+        </div>
+
+        <main class="container">
+            <div class="shopping-cart-container">
+                <div class="cart-items">
+                    <div id="empty-cart-message" style="display: none;">
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Giỏ hàng của bạn đang trống</h3>
+                            <p>Vui lòng thêm khóa học vào giỏ hàng để tiếp tục.</p>
+                            <a href="index.html#courses" class="btn-primary">Xem khóa học</a>
+                        </div>
+                    </div>
+                    <div id="cart-items-list">
+                        <!-- Cart items will be displayed here -->
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Tóm tắt đơn hàng</h3>
+                    <div class="summary-row">
+                        <span>Tổng khóa học:</span>
+                        <span id="total-courses">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0 VNĐ</span>
+                    </div>
+                    <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                        <span>Giảm giá:</span>
+                        <span id="discount-amount">0 VNĐ</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Tổng cộng:</span>
+                        <span id="total-amount">0 VNĐ</span>
+                    </div>
+                    <div class="promo-code">
+                        <input type="text" id="promo-code-input" placeholder="Nhập mã giảm giá">
+                        <button id="apply-promo">Áp dụng</button>
+                    </div>
+                    <button id="checkout-btn" class="checkout-btn" disabled>Tiến hành thanh toán</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Payment Modal -->
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Phương thức thanh toán</h3>
+                    <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="payment-summary">
+                        <h4>Thông tin đơn hàng</h4>
+                        <div class="summary-row">
+                            <span>Tổng khóa học:</span>
+                            <span id="modal-total-courses">0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tổng tiền:</span>
+                            <span id="modal-total-amount">0 VNĐ</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h4>Chọn phương thức thanh toán</h4>
+                        <div class="payment-method-options">
+                            <div class="payment-option" data-method="momo">
+                                <div class="payment-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h5>MoMo</h5>
+                                    <p>Thanh toán qua ví điện tử MoMo</p>
+                                </div>
+                            </div>
+                            <div class="payment-option" data-method="vnpay">
+                                <div class="payment-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h5>VNPay</h5>
+                                    <p>Thanh toán qua cổng VNPay</p>
+                                </div>
+                            </div>
+                            <div class="payment-option" data-method="bank">
+                                <div class="payment-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h5>Chuyển khoản ngân hàng</h5>
+                                    <p>Chuyển khoản qua tài khoản ngân hàng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-details" id="payment-details">
+                        <!-- Payment details will be displayed here based on selected method -->
+                    </div>
+                    
+                    <div class="payment-actions">
+                        <button id="confirm-payment" class="confirm-payment-btn" disabled>Xác nhận thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Thanh toán thành công</h3>
+                    <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Cảm ơn bạn đã đăng ký khóa học!</h4>
+                        <p>Đơn hàng của bạn đã được xác nhận. Mã đơn hàng: <span id="order-id"></span></p>
+                        <p>Chúng tôi đã gửi email xác nhận đến địa chỉ email của bạn.</p>
+                        <p>Bạn có thể xem thông tin khóa học đã đăng ký trong mục "Khóa học của tôi".</p>
+                        <div class="success-actions">
+                            <a href="index.html" class="btn-secondary">Quay lại trang chủ</a>
+                            <a href="dashboard.html" class="btn-primary">Đến trang quản lý</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-column">
+                            <h3>Về chúng tôi</h3>
+                            <p>
+                                Trung tâm Tin học ABC là đơn vị đào tạo tin học
+                                văn phòng hàng đầu với hơn 15 năm kinh nghiệm.
+                            </p>
+                            <div class="footer-contact">
+                                <p>
+                                    <i class="fas fa-map-marker-alt"></i> 12
+                                    Nguyễn Văn Bảo, P.4, Q.Gò Vấp, TP.HCM
+                                </p>
+                                <p>
+                                    <i class="fas fa-phone"></i> (028) 3835 4409
+                                </p>
+                                <p>
+                                    <i class="fas fa-envelope"></i>
+                                    trungtamabc@tinhocvanphong.edu.vn
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Khóa học</h3>
+                            <ul class="footer-links">
+                                <li>
+                                    <a href="#"
+                                        >Tin học văn phòng cơ bản</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        >Tin học văn phòng nâng cao</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#">Khóa học trực tuyến</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lịch khai giảng</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Hỗ trợ</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Hướng dẫn đăng ký</a></li>
+                                <li><a href="#">Câu hỏi thường gặp</a></li>
+                                <li><a href="#">Phương thức thanh toán</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Đăng ký nhận tin</h3>
+                            <p>
+                                Nhận thông tin về khóa học mới và ưu đãi đặc
+                                biệt
+                            </p>
+                            <form class="footer-subscribe">
+                                <input
+                                    type="email"
+                                    placeholder="Email của bạn"
+                                    required
+                                />
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                            <div class="footer-social">
+                                <a href="#"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>
+                        © 2025 Trung tâm Tin học ABC. Tất cả quyền được bảo lưu.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="shopping-cart.js"></script>
+        <script src="navbar.js"></script>
+    </body>
+</html>
